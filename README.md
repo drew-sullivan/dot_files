@@ -2,5 +2,5 @@
 
 ### Steps
 
-$ cd  dot_files
-$ . load_it.sh
+> $ cd  dot_files
+> $ . load_it.sh
