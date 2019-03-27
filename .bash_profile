@@ -21,7 +21,7 @@ load_dot_files () {
 
             if [ ! -d "$FILE" ]; then
                 . "$FILE"
-                echo "$FILE" loaded
+                echo loaded "$FILE"
             fi
         done
     fi
