@@ -1,11 +1,17 @@
-"remap esc to jj"
-inoremap jj <Esc>
+" Esc in insert mode
+inoremap jj  
 
+" Add numbers to rows
 set number
+
+" Add automatic indentation
 filetype plugin indent on
+
 " show existing tab with 4 spaces width
 set tabstop=4
+
 " when indenting with '>', use 4 spaces width
 set shiftwidth=4
+
 " On pressing tab, insert 4 spaces
 set expandtab

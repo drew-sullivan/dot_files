@@ -1,6 +1,7 @@
 cs () { cd "$@" && ls -GAFhlp; } # cd + ll
 mcd () { mkdir -p "$1" && cs "$1"; } # create new dir and navigate to it. -p creates parents, if needed
 ff () { tree -f | grep "$1"; } # look for a file -f is full path
+find_string () { grep -rnwl . -e "$1"; } # find a given string in the current dir
 
 # Takes a ticket number and a ticket title and turns it into a branch name
 nab () {
@@ -70,7 +71,7 @@ perform_branch_deletes_given () {
 
 alias bashp="vim ~/.bash_profile"
 alias sbashp="source ~/.bash_profile"
-alias bashr="vim ~/.bashrc"
+alias bashr="vim ~/dot_files/.bashrc"
 alias vimr="vim ~/dot_files/.vimrc"
 alias basha="vim ~/dot_files/.bash_aliases"
 alias p="pwd"
@@ -85,7 +86,7 @@ alias l="ls"
 alias ls="ls -GFh"
 alias la="ls -a"
 alias ll="ls -GAFhlp"
-alias gitc="vim ~/.gitconfig"
+alias gitc="vim ~/dot_files/.gitconfig"
 alias cp="cp -iv"
 alias mv="mv -iv"
 alias mkdir="mkdir -pv"
@@ -96,10 +97,8 @@ alias egrep='egrep --color=auto'
 alias fgrep='fgrep --color=auto'
 alias gpoh='git push origin head'
 alias sr='git add . && git commit -m "Small refactoring" && gpoh'
-alias sbashr='source ~/.bashrc && echo ".bashrc updated"'
+alias sbashr='source ~/dot_files/.bashrc && echo "~/dot_files/.bashrc updated"'
 alias gs='git status'
 alias fuxcode='rm -rf ~/Library/Developer/Xcode/DerivedData/'
 alias ds='git branch && git branch --list -r '*/ds/*''
 alias gcod='git checkout develop && git fetch && git pull'
-
-source ~/.git-completion.bash
