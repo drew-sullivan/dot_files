@@ -15,6 +15,7 @@ load_dot_files () {
 
             if [ "$FILE" = "$HOME/dot_files/.vimrc" ] || [ "$FILE" = "$HOME/dot_files/.bash_profile" ]; then
                 cp "$FILE" "$HOME"
+                echo copied "$FILE" to "$HOME"
                 continue
             fi
 
