@@ -9,7 +9,7 @@ load_dot_files () {
         shopt -s dotglob  # Include dot (.) files while looping
         for FILE in ~/dot_files/*;
         do
-            if [ "$FILE" = "$HOME/dot_files/README.md" ]; then
+            if [ "$FILE" = "$HOME/dot_files/README.md" ] || [ "$FILE" = "$HOME/dot_files/load_it.sh" ]; then
                 continue
             fi
 
