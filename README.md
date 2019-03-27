@@ -2,5 +2,5 @@
 
 ### Steps
 
-1. navigate to dot_files
-2. $ . load_it.sh
+$ cd  dot_files
+$ . load_it.sh
