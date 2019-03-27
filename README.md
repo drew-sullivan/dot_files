@@ -4,7 +4,5 @@
 
 ```
 $ cd  dot_files
-```
-```
 $ . load_it.sh
 ```
