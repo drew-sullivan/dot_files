@@ -3,6 +3,6 @@
 ### Steps
 
 ```
-$ cd  dot_files
+$ cd dot_files
 $ . load_it.sh
 ```
