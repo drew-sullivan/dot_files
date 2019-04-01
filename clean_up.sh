@@ -1,3 +1,8 @@
+# TODO:
+# runtime is O(n^2) right now
+# get it down to O(n lg n) by sorting first
+# or O(n) with pointers
+
 delete_sym_links () {
     # Include dot (.) files while looping
     shopt -s dotglob
