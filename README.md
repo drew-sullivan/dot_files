@@ -1,5 +1,7 @@
 # dot_files
 
+Creates sym links to $HOME for each enclosed dot file
+
 ### Loading
 
 ```
