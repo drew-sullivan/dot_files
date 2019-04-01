@@ -1,8 +1,14 @@
 # dot_files
 
-### Steps
+### Loading
 
 ```
 $ cd dot_files
-$ . load_it.sh
+$ . load.sh
+```
+
+### Cleaning up
+```
+$ cd dot_files
+$ . clean_up.sh
 ```
