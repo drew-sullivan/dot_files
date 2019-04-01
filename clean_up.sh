@@ -2,17 +2,17 @@ delete_sym_links () {
     # Include dot (.) files while looping
     shopt -s dotglob
 
-	for FILE in ~/*;
+    for DOT_FILE in ~/dot_files/*;
 	do
-	    if [ ! -d "$FILE" ];
+	    if [ ! -d "$DOT_FILE" ];
 	    then
-		    for DOT_FILE in ~/dot_files/*;
+            for FILE in ~/*;
 		    do
-            if [ $(basename $DOT_FILE) = $(basename $FILE) ] && [ ! -d "$DOT_FILE" ];
-			then
-                rm "$FILE"
-		echo deleted "$FILE"
-			fi
+                if [ ! -d "$DOT_FILE" ] && [ $(basename $DOT_FILE) = $(basename $FILE) ];
+                then
+                    rm "$FILE"
+                    echo deleted "$FILE"
+                fi
 		    done
 	    fi
 	done
