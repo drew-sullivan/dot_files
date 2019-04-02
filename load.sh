@@ -1,3 +1,15 @@
+update () {
+    cd "$HOME"/dot_files
+    BRANCH=$(parse_git_branch)
+    if [ "$BRANCH" != " (master)" ];
+    then
+        git checkout master
+    fi
+    git fetch
+    git pull
+    echo updated dot_files
+}
+
 create_sym_links () {
     if [ -d ~/dot_files ]; then
 
@@ -9,9 +21,15 @@ create_sym_links () {
             if [[ "$FILE" = $HOME/dot_files/.* ]] && [ ! -d "$FILE" ];
             then
                 ln -sv "$FILE" ~
+                if [ $(basename $FILE) != ".vimrc" ];
+                then
+                    source "$FILE"
+                    echo loaded "$FILE"
+                fi
             fi
         done
     fi
 }
 
+update
 create_sym_links
