@@ -68,3 +68,6 @@ perform_branch_deletes_given () {
         git push origin --delete "$BRANCH_NAME" 
     fi
 }
+
+te () { open -a TextEdit "$1"; }  # opens given file in TextEdit
+vsc () { code "$1"; } # opens given file in vs code
