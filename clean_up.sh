@@ -16,5 +16,5 @@ delete_symlinks () {
     return 0
 }
 
-save_dots
+save_dots -e
 delete_symlinks
