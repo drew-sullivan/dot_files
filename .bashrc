@@ -70,5 +70,50 @@ perform_branch_deletes_given () {
     fi
 }
 
+# commit dot files
+# -e = easy commit with default message
+# -c = custom commit with message
+save_dots () {
+    declare opt
+    declare OPTARG
+    declare OPTIND
+
+    HAS_E_OPTION=false
+    HAS_C_OPTION=false
+    COMMIT_MESSAGE="$2"
+
+    while getopts :ec: opt; do
+        case "$opt" in
+            e) HAS_E_OPTION=true ;;
+            c) HAS_C_OPTION=true ;;
+            :) echo "Missing argument for option -$OPTARG"; return 1;;
+           \?) echo "Unknown option -$OPTARG"; return 1;;
+        esac
+    done
+
+    shift $(( OPTIND - 1 ))
+
+    commit_dots "$HAS_E_OPTION" "$HAS_C_OPTION" "$COMMIT_MESSAGE"
+
+    echo "All done!"
+}
+
+# helper for save_dots
+commit_dots () {
+    E="$1"
+    C="$2"
+    COMMIT_MESSAGE="$3"
+
+    git add .
+
+    if "$E"; then
+        git commit -m "Small fixes and updates"
+    else
+        git commit -m "$COMMIT_MESSAGE"
+    fi
+
+    git push origin head
+}
+
 te () { open -a TextEdit "$1"; }  # opens given file in TextEdit
 vsc () { code "$1"; } # opens given file in vs code
