@@ -1,9 +1,3 @@
-easy_commit () {
-    if [ "$2" = -e ] ; then
-        printf 'EASY!'
-    fi
-}
-
 delete_symlinks () {
     local df_path
     local df_name
@@ -22,5 +16,5 @@ delete_symlinks () {
     return 0
 }
 
-easy_commit
+save_dots
 delete_symlinks
