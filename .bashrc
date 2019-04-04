@@ -74,6 +74,7 @@ perform_branch_deletes_given () {
 # -e = easy commit with default message
 # -c = custom commit with message
 save_dots () {
+    printf "\n### COMMITTING ###\n"
     declare opt
     declare OPTARG
     declare OPTIND
