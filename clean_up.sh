@@ -18,3 +18,5 @@ delete_symlinks () {
 
 save_dots -e
 delete_symlinks
+
+printf "All done!"

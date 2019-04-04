@@ -94,8 +94,6 @@ save_dots () {
     shift $(( OPTIND - 1 ))
 
     commit_dots "$HAS_E_OPTION" "$HAS_C_OPTION" "$COMMIT_MESSAGE"
-
-    echo "All done!"
 }
 
 # helper for save_dots
