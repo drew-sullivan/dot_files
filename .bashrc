@@ -102,6 +102,7 @@ commit_dots () {
     C="$2"
     COMMIT_MESSAGE="$3"
 
+    cd ~/dot_files/
     git add .
 
     if "$E"; then
@@ -116,8 +117,8 @@ commit_dots () {
 te () { open -a TextEdit "$1"; }  # opens given file in TextEdit
 vsc () { code "$1"; } # opens given file in vs code
 
-# pulls and merges the most recent develop changes
-sync_w_dev () {
-    BRANCH_TO_UPDATE="$1"
-    gcod && git checkout "$BRANCH_TO_UPDATE" && git merge develop   
+# pulls and merges the most recent develop changes to current branch
+swd () {
+    BRANCH_TO_UPDATE=$(git branch | grep \* | cut -d ' ' -f2)
+    gcod && git checkout "$BRANCH_TO_UPDATE" && git merge develop && pod install
 }
