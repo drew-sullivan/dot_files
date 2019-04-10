@@ -115,3 +115,9 @@ commit_dots () {
 
 te () { open -a TextEdit "$1"; }  # opens given file in TextEdit
 vsc () { code "$1"; } # opens given file in vs code
+
+# pulls and merges the most recent develop changes
+sync_w_dev () {
+    BRANCH_TO_UPDATE="$1"
+    gcod && git checkout "$BRANCH_TO_UPDATE" && git merge develop   
+}
