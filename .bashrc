@@ -122,3 +122,7 @@ swd () {
     BRANCH_TO_UPDATE=$(git branch | grep \* | cut -d ' ' -f2)
     gcod && git checkout "$BRANCH_TO_UPDATE" && git merge develop && pod install
 }
+
+gco () {
+    git checkout "$1"
+}
