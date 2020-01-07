@@ -126,3 +126,8 @@ swd () {
 gco () {
     git checkout "$1"
 }
+
+gca () {
+    git commit -am "$1"
+    gpoh
+}
