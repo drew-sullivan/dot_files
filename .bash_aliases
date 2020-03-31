@@ -38,4 +38,4 @@ alias ldot='. "$HOME"/dot_files/load.sh'
 alias cdot='. "$HOME"/dot_files/clean_up.sh'
 alias fuxcode='rm -rf ~/Library/Developer/Xcode/DerivedData/ && printf "Xcode DerivedData deleted"'
 alias cafe='caffeinate -dismu'
-
+alias dots='cd ~/dot_files'
