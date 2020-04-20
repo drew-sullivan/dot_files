@@ -10,7 +10,7 @@ update () {
     echo updated dot_files
 }
 
-create_sym_links () {
+create_dot_file_sym_links () {
     if [ -d ~/dot_files ]; then
 
         # Include dot (.) files while looping
@@ -31,5 +31,21 @@ create_sym_links () {
     fi
 }
 
+create_xcode_code_snippet_sym_links () {
+    if [ -d ~/dot_files/xcode_code_snippets ]; then
+
+        for FILE in ~/dot_files/xcode_code_snippets/*;
+        do
+            if [[ "$FILE" = ~/dot_files/xcode_code_snippets ]] && [ ! -d "$FILE" ];
+            then
+                ln -sv "$FILE" ~/Library/Developer/Xcode/UserData/CodeSnippets
+                source "$FILE"
+                echo loaded "$FILE"
+            fi
+        done
+    fi
+}
+
 update
-create_sym_links
+create_dot_file_sym_links
+create_xcode_code_snippet_sym_links
