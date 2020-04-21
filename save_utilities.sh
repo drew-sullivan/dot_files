@@ -1,3 +1,5 @@
+#!/bin/sh
+
 save_xcode_codesnippets () {
     rm -rf ~/dot_files/xcode_code_snippets/
     printf "\nDeleted ~/dot_files/xcode_code_snippets/\n"

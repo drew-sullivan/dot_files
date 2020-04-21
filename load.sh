@@ -1,3 +1,5 @@
+#!/bin/bash
+
 update_dot_files () {
     cd "$HOME"/dot_files
     BRANCH=$(parse_git_branch)

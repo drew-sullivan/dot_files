@@ -1,3 +1,5 @@
+#!/bin/bash
+
 delete_symlinks () {
     local df_path
     local df_name
