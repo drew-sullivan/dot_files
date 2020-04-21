@@ -62,8 +62,6 @@ for i in range(len(titles)):
     str = '| {} | {} | {} |\n'.format(title, summary, shortcut)
     md_str += str
 
-print(md_str)
-
 lines = []
 with open("README.md", "r") as readme:
     for line in readme:
