@@ -60,7 +60,7 @@ for i in range(len(titles)):
     str = '| {} | {} | {} |\n'.format(title, summary, shortcut)
     md_str += str
 
-with open("code_snippet_table.md", "w") as cs_file:
+with open("README.md", "a") as cs_file:
     cs_file.write(md_str)
 
 print("\ncode_snippet_table.md updated\n")
