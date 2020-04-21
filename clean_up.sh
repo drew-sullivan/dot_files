@@ -23,8 +23,8 @@ save_xcode_codesnippets () {
     printf "Copied all library code snippets to dot_files"
 }
 
+save_xcode_codesnippets
 save_dots -e
 delete_symlinks
-save_xcode_codesnippets
 
-printf "\nAll done!"
+printf "\nAll done!\n"
