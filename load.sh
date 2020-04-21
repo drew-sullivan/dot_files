@@ -1,4 +1,4 @@
-update () {
+update_dot_files () {
     cd "$HOME"/dot_files
     BRANCH=$(parse_git_branch)
     if [ "$BRANCH" != " (master)" ];
@@ -45,6 +45,6 @@ copy_xcode_code_snippets_to_CodeSnippets () {
     fi
 }
 
-update
+update_dot_files
 create_dot_file_sym_links
 copy_xcode_code_snippets_to_CodeSnippets

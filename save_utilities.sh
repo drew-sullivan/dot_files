@@ -9,4 +9,4 @@ save_xcode_codesnippets
 python update_code_snippet_table_in_README.py
 save_dots -e
 
-printf "\nAll utilites have been saved!\n"
+printf "\nAll utilites have been saved\n"
