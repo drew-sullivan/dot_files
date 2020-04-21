@@ -31,4 +31,3 @@ $ save_dots [-ec] ['commit_message']
 | test2 | Rebecca | becca |
 | ds_test_code_snippet_4 | None | None |
 | DS - Custom View Initialization Boilerplate | None | ds_init_view |
-| ds_test_code_snippet_6 | a tester! | test6 |
