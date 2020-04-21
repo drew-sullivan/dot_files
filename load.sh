@@ -31,16 +31,15 @@ create_dot_file_sym_links () {
     fi
 }
 
-create_xcode_code_snippet_sym_links () {
+copy_xcode_code_snippets_to_CodeSnippets () {
     if [ -d ~/dot_files/xcode_code_snippets ]; then
 
         for FILE in ~/dot_files/xcode_code_snippets/*;
         do
-            if [[ "$FILE" = ~/dot_files/xcode_code_snippets ]] && [ ! -d "$FILE" ];
+            if [[ "$FILE" = ~/dot_files/xcode_code_snippets/* ]] && [ ! -d "$FILE" ];
             then
-                ln -sv "$FILE" ~/Library/Developer/Xcode/UserData/CodeSnippets
-                source "$FILE"
-                echo loaded "$FILE"
+                cp "$FILE" ~/Library/Developer/Xcode/UserData/CodeSnippets
+                echo copied "$FILE" to CodeSnippets
             fi
         done
     fi
@@ -48,4 +47,4 @@ create_xcode_code_snippet_sym_links () {
 
 update
 create_dot_file_sym_links
-create_xcode_code_snippet_sym_links
+copy_xcode_code_snippets_to_CodeSnippets
