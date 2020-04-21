@@ -54,7 +54,7 @@ section_title = 'Xcode Code Snippets'
 formatted_section_title = '### {}\n'.format(section_title)
 headers = '| Title | Summary | Shortcut |\n'
 underline = '| :--- | :--- | :--- |\n'
-md_str = section_title + headers + underline
+md_str = formatted_section_title + headers + underline
 for i in range(len(titles)):
     title = titles[i]
     summary = summaries[i]
@@ -62,14 +62,14 @@ for i in range(len(titles)):
     str = '| {} | {} | {} |\n'.format(title, summary, shortcut)
     md_str += str
 
+print(md_str)
+
 lines = []
 with open("README.md", "r") as readme:
     for line in readme:
         if section_title in line:
             break
         lines.append(line)
-
-print(lines)
 
 with open("README.md", "w") as readme:
     for line in lines:
