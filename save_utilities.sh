@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/bash
 
 save_xcode_codesnippets () {
     rm -rf ~/dot_files/xcode_code_snippets/
