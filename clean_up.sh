@@ -24,7 +24,7 @@ save_xcode_codesnippets () {
 }
 
 save_xcode_codesnippets
-python update_code_snippet_table.py
+python update_code_snippet_table_in_README.py
 save_dots -e
 delete_symlinks
 

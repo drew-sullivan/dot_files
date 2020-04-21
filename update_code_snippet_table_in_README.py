@@ -1,6 +1,7 @@
 import sys
 import glob
 import xml.etree.ElementTree as ET
+import fileinput
 
 code_snippets = glob.glob("xcode_code_snippets/*.codesnippet")
 
@@ -49,7 +50,8 @@ def get_table_elements():
 
 (titles, summaries, shortcuts) = get_table_elements()
 
-section_title = '### Xcode code snippets\n'
+section_title = 'Xcode Code Snippets'
+formatted_section_title = '### {}\n'.format(section_title)
 headers = '| Title | Summary | Shortcut |\n'
 underline = '| :--- | :--- | :--- |\n'
 md_str = section_title + headers + underline
@@ -60,7 +62,18 @@ for i in range(len(titles)):
     str = '| {} | {} | {} |\n'.format(title, summary, shortcut)
     md_str += str
 
-with open("README.md", "a") as cs_file:
-    cs_file.write(md_str)
+lines = []
+with open("README.md", "r") as readme:
+    for line in readme:
+        if section_title in line:
+            break
+        lines.append(line)
 
-print("\ncode_snippet_table.md updated\n")
+print(lines)
+
+with open("README.md", "w") as readme:
+    for line in lines:
+        readme.write(line)
+    readme.write(md_str)
+
+print("\nREADME.md updated with new XCode snippets\n")
