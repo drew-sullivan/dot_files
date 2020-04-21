@@ -49,10 +49,10 @@ def get_table_elements():
 
 (titles, summaries, shortcuts) = get_table_elements()
 
-
+section_title = '### Xcode code snippets\n
 headers = '| Title | Summary | Shortcut |\n'
 underline = '| :--- | :--- | :--- |\n'
-md_str = headers + underline
+md_str = section_title + headers + underline
 for i in range(len(titles)):
     title = titles[i]
     summary = summaries[i]
