@@ -18,9 +18,9 @@ delete_symlinks () {
 
 save_xcode_codesnippets () {
     rm -rf ~/dot_files/xcode_code_snippets/
-    printf "Deleted ~/dot_files/xcode_code_snippets/"
+    printf "\nDeleted ~/dot_files/xcode_code_snippets/\n"
     cp -R ~/Library/Developer/Xcode/UserData/CodeSnippets ~/dot_files/xcode_code_snippets
-    printf "Copied all library code snippets to dot_files"
+    printf "\nCopied all library code snippets to dot_files\n"
 }
 
 save_xcode_codesnippets
