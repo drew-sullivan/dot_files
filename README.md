@@ -9,6 +9,13 @@ $ cd dot_files
 $ . load.sh
 ```
 
+### Saving
+
+```
+$ cd dot_files
+$ . save_utilities.sh
+```
+
 ### Cleaning up
 ```
 $ cd dot_files
