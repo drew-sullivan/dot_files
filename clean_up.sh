@@ -27,4 +27,4 @@ save_dots -e
 delete_symlinks
 save_xcode_codesnippets
 
-printf "All done!"
+printf "\nAll done!"
