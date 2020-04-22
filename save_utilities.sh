@@ -7,6 +7,7 @@ save_xcode_codesnippets () {
     printf "\nCopied all library code snippets to dot_files\n"
 }
 
+cd ~/dot_files
 save_xcode_codesnippets
 python update_code_snippet_table_in_README.py
 save_dots -e
