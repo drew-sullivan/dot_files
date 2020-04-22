@@ -33,4 +33,5 @@ $ save_dots [-ec] ['commit_message']
 ### Xcode Code Snippets
 | Title | Summary | Shortcut |
 | :--- | :--- | :--- |
+| ds_objc_basic_init | Basic initializer for Objective-C | oinit |
 | DS - Custom View Initialization Boilerplate | None | ds_init_view |
