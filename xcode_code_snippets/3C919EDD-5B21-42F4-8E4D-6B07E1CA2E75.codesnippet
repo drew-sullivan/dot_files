@@ -3,29 +3,27 @@
 <plist version="1.0">
 <dict>
 	<key>IDECodeSnippetCompletionPrefix</key>
-	<string>oinit</string>
+	<string>inn</string>
 	<key>IDECodeSnippetCompletionScopes</key>
 	<array>
 		<string>All</string>
 	</array>
 	<key>IDECodeSnippetContents</key>
-	<string>- (instancetype)init {
-    if (self = [super init]) {
-        // set properties here
+	<string>if (self = [super init]) {
+        
     }
-    return self;
-}</string>
+    return self;</string>
 	<key>IDECodeSnippetIdentifier</key>
-	<string>9C4CD7DA-24A0-4305-B071-F2CC99E746CE</string>
+	<string>3C919EDD-5B21-42F4-8E4D-6B07E1CA2E75</string>
 	<key>IDECodeSnippetLanguage</key>
 	<string>Xcode.SourceCodeLanguage.Generic</string>
 	<key>IDECodeSnippetSummary</key>
-	<string>Basic initializer for Objective-C</string>
+	<string>Just the inside of a basic initializer of Objective-C</string>
 	<key>IDECodeSnippetTitle</key>
-	<string>ds_objc_basic_init</string>
+	<string>ds_objc_basic_init_innards</string>
 	<key>IDECodeSnippetUserSnippet</key>
 	<true/>
 	<key>IDECodeSnippetVersion</key>
-	<integer>2</integer>
+	<integer>0</integer>
 </dict>
 </plist>
